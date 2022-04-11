@@ -17,4 +17,4 @@ RUN aws --version
 RUN docker -v
 RUN kubectl version --short --client
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash","-l", "-c"]
