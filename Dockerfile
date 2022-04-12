@@ -14,8 +14,12 @@ RUN ./install-aws-cli.sh
 RUN chmod +x install-k8s-cli.sh
 RUN ./install-k8s-cli.sh
 
+RUN chmod +x install-eks-cli.sh
+RUN ./install-eks-cli.sh
+
 RUN aws --version
 RUN docker -v
 RUN kubectl version --short --client
+RUN eksctl version
 
 ENTRYPOINT [""]
